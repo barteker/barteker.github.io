@@ -528,7 +528,7 @@ footer {
 .gallery-item {
     width: 100%;
     overflow: hidden;
-    border-radius: 8px;
+    border-radius: 0px;
     transition: transform 0.3s ease;
 }
 
@@ -540,6 +540,7 @@ footer {
     width: 100%;
     height: auto;
     display: block;
+    border-radius: 0px;
 }
 
 @media (max-width: 768px) {
@@ -549,5 +550,9 @@ footer {
     
     .gallery-row.two-columns {
         flex-direction: column;
+    }
+
+    .title-svg text {
+        font-size: 96px;
     }
 }
