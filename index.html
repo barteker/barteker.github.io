@@ -34,24 +34,24 @@
 <body>
     <nav class="side-nav sticky" role="navigation" aria-label="Main navigation">
         <ul role="menubar">
-            <li role="none"><a class="active" href="../" role="menuitem">ABOUT</a></li>
-            <li role="none"><a href="../web" role="menuitem">WEB</a></li>
-            <li role="none"><a href="../audio" role="menuitem">AUDIO</a></li>
-            <li role="none"><a href="../visual" role="menuitem">VISUAL</a></li>
-            <li role="none"><a href="../stuff" role="menuitem">STUFF</a></li>
+            <li role="none"><a class="active " href="../" role="menuitem">ABOUT</a></li>
+            <li role="none"><a class="scrambled" href="../visual" role="menuitem">VISUAL</a></li>
+            <li role="none"><a class="scrambled" href="../web" role="menuitem">WEB</a></li>
+            <li role="none"><a class="scrambled" href="../audio" role="menuitem">AUDIO</a></li>
+            <li role="none"><a class="scrambled" href="../stuff" role="menuitem">STUFF</a></li>
         </ul>
     </nav>
 
 
     <main id="main-content">
-        <div class="font-credits">Currently using Clash Grotesk <br> Indian Type Foundry (Indian Type Foundry)</div>
+        <div class="font-credits scrambled">Currently using Clash Grotesk <br> Indian Type Foundry (Indian Type Foundry)</div>
 
         <div class="title">Bart Baker</div>
 
         <section class="intro txt">
-            <p>Hi! My name is Bart Baker.</p>
+            <p class="">Hi! My name is Bart Baker.</p>
             <p class="spacer"></p>
-            <p>I'm a musician, designer, athlete and engineer who wants to take friction out of life, giving beauty to
+            <p class="">I'm a musician, designer, athlete and engineer who wants to take friction out of life, giving beauty to
                 small tasks.</p>
         </section>
 
@@ -60,9 +60,9 @@
         </section>
 
         <section class="bio txt">
-            <p>Born and raised in Menlo Park, CA, I have always been a creative and a problem solver. This led me to
-                enroll at CU Boulder pursuing a degree in Piano Performance as well as one in Creative Technology
-                and Design.</p>
+            <p>Born and raised in Menlo Park, CA, I have always been a creative and a problem solver. My 
+                curiosity led me to CU Boulder, completing degrees in Piano Performance as well as 
+                Creative Technology and Design.</p>
             <p class="spacer"></p>
             <p>I create experiences that resonate with purpose and precision. As a designer, I blend strategic thinking with creative execution to craft meaningful brand identities and compelling digital experiences. My multidisciplinary background gives me a unique perspective on problem-solving and aesthetic decision-making.</p>
             <p class="spacer"></p>
@@ -70,11 +70,10 @@
         </section>
 
         <section class="resume-section">
-            <a href="src/assets/data/ResumeEngineeringFinal.pdf" class="resume-button" target="_blank">OBSERVED EXPERIENCE</a>
+            <a href="src/assets/data/BAKER_BART_RESUME.pdf" class="resume-button" target="_blank">OBSERVED EXPERIENCE</a>
         </section>
 
         <section class="blank-image-section">
-            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjBmMGYwIi8+PC9zdmc+" alt="Blank image" class="blank-image">
         </section>
 
         <footer>
@@ -84,9 +83,24 @@
 
     </main>
 
-    <div class="boulder-co ">BOULDER, CO</div>
+    <div class="boulder-co scrambled">BOULDER, CO</div>
+
+    <!-- Bouncing Arrow -->
+    <div id="bouncing-arrow" class="bouncing-arrow">
+        <img src="src/assets/icon/arrow.svg" alt="Scroll down arrow">
+    </div>
 
     <script src="src/scripts/script.js"></script>
+    <script src="src/scripts/gsap.min.js"></script>
+    <script src="src/scripts/ScrambleTextPlugin.min.js"></script>
+    <script src="src/scripts/animations.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.2.3/dist/lenis.min.js"></script>
+    <script>
+        // Lenis
+        const lenis = new Lenis({
+            autoRaf: true,
+        });
+    </script>
 </body>
 
 </html>

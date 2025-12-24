@@ -11,11 +11,11 @@
     <!-- Same nav structure -->
     <nav class="side-nav sticky">
         <ul>
-            <li><a href="/">ABOUT</a></li>
-            <li><a href="../web">WEB</a></li>
-            <li><a href="../audio">AUDIO</a></li>
+            <li><a class="scrambled" href="/">ABOUT</a></li>
             <li><a class="active" href="../visual">VISUAL</a></li>
-            <li><a href="../stuff">STUFF</a></li>
+            <li><a class="scrambled" href="../web">WEB</a></li>
+            <li><a class="scrambled" href="../audio">AUDIO</a></li>
+            <li><a class="scrambled" href="../stuff">STUFF</a></li>
         </ul>
     </nav>
 
@@ -36,25 +36,120 @@
                 <!-- Full width row -->
                 <div class="gallery-row full-width">
                     <div class="gallery-item">
-                        <img src="https://placehold.co/800x400" alt="Project 1">
+                        <img src="../src/assets/thisisdrugs/Coffee Bags Mockups-Standard.png" alt="this is drugs. coffee bags">
+                        <div class="project-info">
+                            <h3 class="project-title">this is drugs.</h3>
+                            <p class="project-description">This is drugs. iis a brand design created for my final project in the class ATLS </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Row of multiple images -->
+                <div class="gallery-row multi-image">
+                    <div class="gallery-item">
+                        <img src="../src/assets/img/WINvsNYA.png" alt="Win vs NYA Post" loading="lazy">
+                        <div class="project-info">
+                            <h3 class="project-title"></h3>
+                            <p class="project-description"></p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../src/assets/img/WesternsPost.png" alt="Westerns Post" loading="lazy">
+                        <div class="project-info">
+                            <h3 class="project-title"></h3>
+                            <p class="project-description"></p>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Row of multiple images -->
+                <div class="gallery-row multi-image">
+
+                    <div class="gallery-item">
+                        <img src="../src/assets/img/MeetWeekPostState.png" alt="Meet Week States Post" loading="lazy">
+                        <div class="project-info">
+                            <h3 class="project-title"></h3>
+                            <p class="project-description"></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Row of multiple images -->
+                <div class="gallery-row multi-image">
+                    <div class="gallery-item">
+                        <img src="../src/assets/img/12.05.25Unit5v2@150x.png" alt="Unit 5 Poster" loading="lazy">
+                        <div class="project-info">
+                            <h3 class="project-title"></h3>
+                            <p class="project-description"></p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../src/assets/img/OpiumFox11x17.png" alt="Opium at Fox Theatre Poster" loading="lazy">
+                        <div class="project-info">
+                            <h3 class="project-title"></h3>
+                            <p class="project-description"></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Row of multiple images -->
+                <div class="gallery-row multi-image">
+                    <div class="gallery-item">
+                        <img src="../src/assets/img/HalloweenShowPoster-11x17.png" alt="Halloween 2024 Poster" loading="lazy">
+                        <div class="project-info">
+                            <h3 class="project-title"></h3>
+                            <p class="project-description"></p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../src/assets/img/SkateJamHouseShow-11x17finalPDF.png" alt="Skate Jam Poster" loading="lazy">
+                        <div class="project-info">
+                            <h3 class="project-title"></h3>
+                            <p class="project-description"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-row multi-image">
+                    <div class="gallery-item">
+                        <img src="../src/assets/img/IceCoopPosterFinal.png" alt="Ice Coop Poster" loading="lazy">
+                        <div class="project-info">
+                            <h3 class="project-title"></h3>
+                            <p class="project-description"></p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../src/assets/img/TabloidPoster150.png" alt="Halloween 2025 Poster" loading="lazy">
+                        <div class="project-info">
+                            <h3 class="project-title"></h3>
+                            <p class="project-description"></p>
+                        </div>
                     </div>
                 </div>
                 <!-- Two column layout -->
                 <div class="gallery-row two-columns">
                     <div class="gallery-column">
                         <div class="gallery-item">
-                            <img src="https://placehold.co/400x800" alt="Project 2">
+                            <div class="project-info">
+                                <h3 class="project-title"></h3>
+                                <p class="project-description"></p>
+                            </div>
                         </div>
                         <div class="gallery-item">
-                            <img src="https://placehold.co/400x400" alt="Project 3">
+                            <div class="project-info">
+                                <h3 class="project-title"></h3>
+                                <p class="project-description"></p>
+                            </div>
                         </div>
                     </div>
                     <div class="gallery-column">
                         <div class="gallery-item">
-                            <img src="https://placehold.co/400x400" alt="Project 4">
+                            <div class="project-info">
+                                <h3 class="project-title"></h3>
+                                <p class="project-description"></p>
+                            </div>
                         </div>
                         <div class="gallery-item">
-                            <img src="https://placehold.co/400x800" alt="Project 5">
+                            <div class="project-info">
+                                <h3 class="project-title"></h3>
+                                <p class="project-description"></p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -62,5 +157,15 @@
         </div>
     </main>
     <script src="../src/scripts/pages.js"></script>
+    <script src="../src/scripts/gsap.min.js"></script>
+    <script src="../src/scripts/ScrambleTextPlugin.min.js"></script>
+    <script src="../src/scripts/animations.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.2.3/dist/lenis.min.js"></script>
+    <script>
+    // Lenis
+        const lenis = new Lenis({
+            autoRaf: true,
+        });
+    </script>
 </body>
 </html>

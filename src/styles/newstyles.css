@@ -128,7 +128,7 @@
 
 :root {
   --text-color: #000000;
-  --bg-color: #ffffff;
+  --bg-color: #F5F5F5;
 }
 
 * {
@@ -377,7 +377,6 @@ footer {
     height: 20vh;
     /* Fixed height container */
     line-height: 1.2;
-    margin-bottom: 0;
     position: relative;
     top: auto;
     left: auto;
@@ -388,7 +387,8 @@ footer {
     white-space: normal;
     /* Allow wrapping if needed */
     text-align: center;
-    margin-top: 10rem;
+    margin-top: 264px;
+    margin-bottom: 132px;
     /* Space for the font credits */
   }
 
@@ -466,14 +466,15 @@ footer {
     top: 0;
     width: 70.71%;
     z-index: 1;
-}
-
-.title-svg {
+    pointer-events: none;
+  }
+  
+  .title-svg {
     width: 100%;
     position: absolute;
-}
-
-.title-svg text {
+  }
+  
+  .title-svg text {
     font-family: "Clash Grotesk", sans-serif;
     font-size: 4rem;
     fill: var(--text-color);
@@ -494,7 +495,7 @@ footer {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 70.71%;
+    margin-top: 20vw;
 }
 
 .projects-gallery {
@@ -516,6 +517,16 @@ footer {
 .gallery-row.two-columns {
     display: flex;
     gap: 44px;
+}
+
+.gallery-row.multi-image {
+    display: flex;
+    gap: 44px;
+    width: 100%;
+}
+
+.gallery-row.multi-image .gallery-item {
+    flex: 1;
 }
 
 .gallery-column {
@@ -543,6 +554,27 @@ footer {
     border-radius: 0px;
 }
 
+.project-info {
+    font-family: "Clash Grotesk", sans-serif;
+    margin-top: 1rem;
+    padding: 0.5rem 0;
+}
+
+.project-title {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.project-description {
+    font-size: 1rem;
+    color: var(--text-color);
+    line-height: 1.6;
+    opacity: 0.8;
+}
+
 @media (max-width: 768px) {
     .projects-gallery {
         width: 90%;
@@ -552,7 +584,48 @@ footer {
         flex-direction: column;
     }
 
+    .gallery-row.multi-image {
+        flex-direction: column;
+    }
+
     .title-svg text {
         font-size: 96px;
+    }
+
+    .project-title {
+        font-size: 1.1rem;
+    }
+
+    .project-description {
+        font-size: 0.9rem;
+    }
+}
+
+/* Bouncing Arrow Styles */
+.bouncing-arrow {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.bouncing-arrow img {
+    width: 30px;
+    height: 30px;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .bouncing-arrow {
+        bottom: 1rem;
+    }
+    
+    .bouncing-arrow img {
+        width: 30px;
+        height: 30px;
     }
 }

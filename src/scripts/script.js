@@ -125,3 +125,4 @@ window.addEventListener('scroll', () => {
         }, 150);
     }
 });
+
