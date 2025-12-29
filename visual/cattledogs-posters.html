@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/styles/newstyles.css">
+    <title>Cattledogs Posters - Bart Baker</title>
+    <!-- ...same meta tags as index... -->
+
+</head>
+<body>
+
+    <nav class="side-nav sticky">
+        <ul>
+            <li><a class="scrambled" href="/">ABOUT</a></li>
+            <li><a class="active" href="../visual">VISUAL</a></li>
+            <li><a class="scrambled" href="../web">WEB</a></li>
+            <li><a class="scrambled" href="../audio">AUDIO</a></li>
+            <li><a class="scrambled" href="../stuff">STUFF</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="title-container">
+            <svg viewBox="0 -200 1080 1080" class="title-svg">
+                <path id="curve" fill="transparent" d="M0,0h780c110.46,0,200,89.54,200,200v780" />
+                <text>
+                    <textPath href="#curve" startOffset="0%">
+                        cattledogs posters
+                    </textPath>
+                </text>
+            </svg>
+        </div>
+    </main>
+    <script src="../src/scripts/pages.js"></script>
+    <script src="../src/scripts/gsap.min.js"></script>
+    <script src="../src/scripts/ScrambleTextPlugin.min.js"></script>
+    <script src="../src/scripts/animations.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.2.3/dist/lenis.min.js"></script>
+    <script>
+        // Lenis
+        const lenis = new Lenis({
+            autoRaf: true,
+        });
+    </script>
+</body>
+</html>
+
