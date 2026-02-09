@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/styles/newstyles.css">
+    <title>Observed Experience - Bart Baker</title>
+    <!-- ...same meta tags as index... -->
+    <style>
+        /* Override gallery width to 68.33% */
+        .projects-gallery {
+            width: 68.33% !important;
+        }
+        .side-nav {
+            position: fixed;
+            z-index: 2;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Side nav with only one tab "home" that is NOT active -->
+    <nav class="side-nav sticky">
+        <ul>
+            <li><a class="scrambled" href="../">HOME</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- <div class="title-container">
+            <svg viewBox="0 -200 1080 1080" class="title-svg">
+                <path id="curve" fill="transparent" d="M0,0h780c110.46,0,200,89.54,200,200v780" />
+                <text>
+                    <textPath href="#curve" startOffset="0%">
+                            Output
+                    </textPath>
+                </text>
+            </svg>
+        </div> -->
+    
+        
+        <!-- Projects content section -->
+        <div class="projects-container">
+            <div class="projects-gallery">
+                <!-- thisisdrugs. BRANDING -->
+                <div class="gallery-row full-width">
+                    <div class="gallery-item" onclick="window.location.href='../visual/this-is-drugs.html'">
+                        <img src="../src/assets/thisisdrugs/Coffee Bags Mockups-Standard.png" alt="this is drugs. coffee bags">
+                    </div>
+                </div>
+
+                <!-- ROCKY MOUNTAIN MAVERICKS -->
+                <div class="gallery-row multi-image">
+                    <div class="gallery-item" onclick="window.location.href='../visual/rocky-mountain-mavericks.html'">
+                        <img src="../src/assets/img/MeetWeekPostState.png" alt="Meet Week States Post" loading="lazy">
+                    </div>
+                </div>
+
+                <!-- Additional RMM assets -->
+                <div class="gallery-row multi-image">
+                    <div class="gallery-item" onclick="window.location.href='../visual/rocky-mountain-mavericks.html'">
+                        <img src="../src/assets/img/WINvsNYA.png" alt="Win vs NYA Post" loading="lazy">
+                    </div>
+                    <div class="gallery-item" onclick="window.location.href='../visual/rocky-mountain-mavericks.html'">
+                        <img src="../src/assets/img/WesternsPost.png" alt="Westerns Post" loading="lazy">
+                    </div>
+                </div>
+
+                <!-- CATTLEDOGS POSTERS -->
+                <div class="gallery-row multi-image">
+                    <div class="gallery-item" onclick="window.location.href='../visual/cattledogs-posters.html'">
+                        <img src="../src/assets/img/12.05.25Unit5v2@150x.png" alt="Unit 5 Poster" loading="lazy">
+                    </div>
+                    <div class="gallery-item" onclick="window.location.href='../visual/cattledogs-posters.html'">
+                        <img src="../src/assets/img/OpiumFox11x17.png" alt="Opium at Fox Theatre Poster" loading="lazy">
+                    </div>
+                </div>
+                
+                <div class="gallery-row multi-image">
+                    <div class="gallery-item" onclick="window.location.href='../visual/cattledogs-posters.html'">
+                        <img src="../src/assets/img/HalloweenShowPoster-11x17.png" alt="Halloween 2024 Poster" loading="lazy">
+                    </div>
+                    <div class="gallery-item" onclick="window.location.href='../visual/cattledogs-posters.html'">
+                        <img src="../src/assets/img/SkateJamHouseShow-11x17finalPDF.png" alt="Skate Jam Poster" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="gallery-row multi-image">
+                    <div class="gallery-item" onclick="window.location.href='../visual/cattledogs-posters.html'">
+                        <img src="../src/assets/img/IceCoopPosterFinal.png" alt="Ice Coop Poster" loading="lazy">
+                    </div>
+                    <div class="gallery-item" onclick="window.location.href='../visual/cattledogs-posters.html'">
+                        <img src="../src/assets/img/TabloidPoster150.png" alt="Halloween 2025 Poster" loading="lazy">
+                    </div>
+                </div>
+
+                <!-- cultof8 BRANDING -->
+                <div class="gallery-row full-width">
+                    <div class="gallery-item" onclick="window.location.href='../visual/cultof8-branding.html'">
+                        <img src="../src/assets/cultof8/MainLogo.png" alt="cultof8 Logotype">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="../src/scripts/pages.js"></script>
+    <script src="../src/scripts/gsap.min.js"></script>
+    <script src="../src/scripts/ScrambleTextPlugin.min.js"></script>
+    <script src="../src/scripts/animations.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.2.3/dist/lenis.min.js"></script>
+    <script>
+        // Lenis
+        const lenis = new Lenis({
+            autoRaf: true,
+        });
+    </script>
+</body>
+</html>
+
