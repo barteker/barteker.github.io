@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../src/styles/newstyles.css">
     <title>Web Projects - Bart Baker</title>
-    <!-- ...same meta tags as index... -->
+
 </head>
 <body>
-    <!-- Same nav structure -->
+
     <nav class="side-nav sticky">
         <ul>
             <li><a class="scrambled" href="/">ABOUT</a></li>
@@ -20,7 +20,7 @@
     </nav>
 
     <main>
-        <div class="title-container">
+        <div class="title-container" >
             <svg viewBox="0 -200 1080 1080" class="title-svg">
                 <path id="curve" fill="transparent" d="M0,0h780c110.46,0,200,89.54,200,200v780" />
                 <text>
@@ -34,11 +34,33 @@
         <!-- Projects content section -->
         <div class="projects-container">
             <div class="projects-gallery">
+                <div class="project-info">
+                    <h3 class="project-title">this website</h3>
+                    <p class="project-description"><a href="https://bartbkr.com">bartbkr.com</a> was built from scratch as an exercise in web development and design. It started with HTML and CSS, and now includes custom JavaScript animations and GSAP implementations.</p>
+                </div>
                 <!-- Full width row -->
                 <div class="gallery-row full-width">
-                    <div class="gallery-item">
-                        <img src="https://placehold.co/800x400.png" alt="Project 1">
-                    </div>
+                    <a href="https://cubouldergymnastics.wordpress.com" class="gallery-item" style="text-decoration: none;">
+                        <div class="web-screenshot-container" data-lenis-prevent>
+                            <img src="../src/assets/img/web/CUGCpage.png" alt="CU Gymnastics Club Website Screenshot" id="web-screenshot">
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">CU Gymnastics Club</h3>
+                            <p class="project-description">Created a landing page that led people to key information and improved SEO. Includes a calendar, leadership roster, and other resources that were previously scattered across social media.</p>
+                        </div>
+                    </a>
+                </div>
+                <!-- Full width row -->
+                <div class="gallery-row full-width">
+                    <a href="https://www.rockymountainmavericks.com" class="gallery-item" style="text-decoration: none;">
+                        <div class="web-screenshot-container" data-lenis-prevent>
+                            <img src="../src/assets/img/web/RMMpage.png" alt="Rocky Mountain Mavericks Website Screenshot" id="web-screenshot"> 
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Rocky Mountain Mavericks</h3>
+                            <p class="project-description">Updated the Rocky Mountain Mavericks Men's Gymnastics team's existing website </p>
+                        </div>
+                    </a>
                 </div>
                 
                 <!-- Two column layout -->
