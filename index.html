@@ -74,7 +74,7 @@
         </section>
 
         <footer>
-            <p>©2025 Bart Baker, All Rights Reserved</p>
+            <p>©2026 Bart Baker, All Rights Reserved</p>
             <p>Designed in Figma</p>
         </footer>
 
@@ -97,6 +97,9 @@
         const lenis = new Lenis({
             autoRaf: true,
         });
+        // Set a flag in sessionStorage to indicate that the homepage has been visited
+        // This will be used to turn off nav scramble after initial visit
+        sessionStorage.setItem('visitedHomepage', 'true');
     </script>
 </body>
 
