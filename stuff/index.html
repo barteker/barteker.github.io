@@ -37,12 +37,12 @@
                         <div class="project-info">
                             <h3 class="project-title">more coming soon...</h3>
                             <p class="project-description">This is a page for miscellaneous projects that I've worked on. I'll be adding more here as I populate the website.</p>
-                            <p class="spacer" style="height: 5000px;"></p>
-                            <p class="project-description">Hey! What are you doing down here? <br><br>If you're that interested in my work, shoot me a <a href="mailto:bartholomewasbaker@gmail.com">message</a>.</p>
-                            <p class="spacer" style="height: 43vh;"></p>
                         </div>
                     </div>
                 </div>
+                <p class="spacer" style="height: 5000px;"></p>
+                <p class="project-description" >Hey! What are you doing down here? <br><br>If you're that interested in my work, shoot me a <span id="mail-link"></span>.</p>
+                <p class="spacer" style="height: 43vh;"></p>
             </div>
         </div>
     </main>
@@ -56,6 +56,17 @@
         const lenis = new Lenis({
             autoRaf: true,
         });
+    </script>
+    <script>
+        (function() {
+            var el = document.getElementById('mail-link');
+            if (el) {
+                var a = document.createElement('a');
+                a.href = 'mailto:' + atob('YmFydGhvbG9tZXdhc2Jha2VyQGdtYWlsLmNvbQ==');
+                a.textContent = 'message';
+                el.appendChild(a);
+            }
+        })();
     </script>
 </body>
 </html>
