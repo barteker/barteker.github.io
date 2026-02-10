@@ -280,6 +280,7 @@ main {
   padding-top: 40vh;
   font-family: "Clash Grotesk", sans-serif;
   font-size: 1.5rem;
+
   writing-mode: vertical-rl;
   text-orientation: mixed;
   transition: all 0.3s ease;
@@ -586,6 +587,7 @@ footer {
 @media (max-width: 768px) {
     .projects-gallery {
         width: 90%;
+        
     }
     
     .gallery-row.two-columns {

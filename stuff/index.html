@@ -41,8 +41,8 @@
                     </div>
                 </div>
                 <p class="spacer" style="height: 5000px;"></p>
-                <p class="project-description" >Hey! What are you doing down here? <br><br>If you're that interested in my work, shoot me a <span id="mail-link"></span>.</p>
-                <p class="spacer" style="height: 40vh;"></p>
+                <p class="project-description" >Hey! What are you doing down here? <br><br>If you're that interested in my work, shoot me a <span id="mail-link"></span>.<br><span id="mail-address"></span></p>
+                <p class="spacer" style="height: 20vh;"></p>
             </div>
         </div>
         <footer>
@@ -69,6 +69,10 @@
                 a.href = 'mailto:' + atob('YmFydGhvbG9tZXdhc2Jha2VyQGdtYWlsLmNvbQ==');
                 a.textContent = 'message';
                 el.appendChild(a);
+            }
+            var el2 = document.getElementById('mail-address');
+            if (el2) {
+                el2.textContent = atob('YmFydGhvbG9tZXdhc2Jha2VyQGdtYWlsLmNvbQ==');
             }
         })();
     </script>
