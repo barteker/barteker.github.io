@@ -7,7 +7,8 @@
     "start": "node server.js",
     "dev": "nodemon server.js",
     "build": "webpack --mode production",
-    "watch": "webpack --mode development --watch"
+    "watch": "webpack --mode development --watch",
+    "optimize-images": "node scripts/optimize-images.js"
   },
   "repository": {
     "type": "git",
@@ -20,12 +21,13 @@
     "express": "^4.18.2"
   },
   "devDependencies": {
-    "nodemon": "^3.0.3",
-    "webpack": "^5.90.1",
-    "webpack-cli": "^5.1.4",
     "css-loader": "^6.10.0",
-    "style-loader": "^3.3.4",
+    "html-webpack-plugin": "^5.6.0",
     "mini-css-extract-plugin": "^2.8.0",
-    "html-webpack-plugin": "^5.6.0"
+    "nodemon": "^3.0.3",
+    "sharp": "^0.34.5",
+    "style-loader": "^3.3.4",
+    "webpack": "^5.90.1",
+    "webpack-cli": "^5.1.4"
   }
 }
