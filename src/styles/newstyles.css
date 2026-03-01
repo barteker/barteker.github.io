@@ -200,6 +200,8 @@ a:visited {
   color: var(--text-color);
   font-size: 1.5rem;
   transition: all 0.3s ease;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .side-nav a:hover {
@@ -280,10 +282,13 @@ main {
   padding-top: 40vh;
   font-family: "Clash Grotesk", sans-serif;
   font-size: 1.5rem;
-
   writing-mode: vertical-rl;
   text-orientation: mixed;
   transition: all 0.3s ease;
+  color: black;
+  text-decoration: none;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 footer {
@@ -352,6 +357,8 @@ footer {
   font-weight: 500;
   transition: all 0.3s ease;
   border-radius: 4px;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 #resume-button:hover {
@@ -377,7 +384,7 @@ footer {
     padding: 1rem;
     position: relative;
     overflow-x: hidden;
-    width: 100%;
+    width: auto;
   }
 
   .title {
@@ -419,7 +426,7 @@ footer {
     height: auto;
     padding: 0;
     position: fixed;
-    width: 100%;
+    width: auto;
     z-index: 1500; /* Lower than font-credits */
     left: 0.5rem;
   }
@@ -466,6 +473,21 @@ footer {
   .project-grid {
     grid-template-columns: 1fr;
     padding: 1rem;
+  }
+
+  .resume-section {
+    position: relative;
+    z-index: 10;
+  }
+
+  #resume-button {
+    position: relative;
+    z-index: 11;
+    min-height: 48px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -550,6 +572,17 @@ footer {
     overflow: hidden;
     border-radius: 0px;
     transition: transform 0.3s ease;
+    /* Reliable taps on mobile and touch devices */
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* When gallery-item is a link (index.html) */
+a.gallery-item {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
 }
 
 .gallery-item:hover {
