@@ -163,9 +163,10 @@ a:visited {
   flex: 1;
   font-family: "Clash Grotesk", sans-serif;
   left: 1rem;
-
   height: auto;
   transition: all 0.3s ease;
+  position: fixed;
+  top: 0;
 }
 
 /* .side-nav.sticky {
@@ -427,7 +428,7 @@ footer {
     padding: 0;
     position: fixed;
     width: auto;
-    z-index: 1500; /* Lower than font-credits */
+    z-index: 10;
     left: 0.5rem;
   }
 
@@ -464,7 +465,7 @@ footer {
     background: var(--bg-color);
     padding: 0.5rem 0.25rem;
     margin-bottom: 0; /* Remove margin */
-    z-index: 2000; /* Higher than side-nav */
+    z-index: 2000; /* above side-nav */
     width: 100%;
     text-align: center;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
