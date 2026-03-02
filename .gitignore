@@ -5,3 +5,6 @@ dist/
 .env
 .cache/
 coverage/
+
+# Large video source files (use compressed mp4 for repo; keep .mov local only)
+*.mov

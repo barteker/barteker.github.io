@@ -27,6 +27,20 @@
         <div class="projects-container">
             <div class="projects-gallery">
 
+                <!-- W/AV TRAILER -->
+                <div class="gallery-row full-width">
+                    <div class="gallery-item video-preview-item" onclick="window.location.href='../visual/wav.html'">
+                        <img src="../src/assets/wav/WAV_Trailer_poster.webp" alt="W/AV Trailer">
+                        <video class="hover-preview" muted loop playsinline preload="none">
+                            <source src="../src/assets/wav/WAV_Trailer_preview.mp4" type="video/mp4">
+                        </video>
+                        <div class="project-info">
+                            <h3 class="project-title">W/AV Trailer</h3>
+                            <p class="project-description">Trailer for W/AV.</p>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- thisisdrugs. BRANDING -->
                 <div class="gallery-row full-width">
                     <div class="gallery-item" >
@@ -177,9 +191,19 @@
     <script src="../src/scripts/animations.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lenis@1.2.3/dist/lenis.min.js"></script>
     <script>
-    // Lenis
         const lenis = new Lenis({
             autoRaf: true,
+        });
+
+        document.querySelectorAll('.video-preview-item').forEach(item => {
+            const video = item.querySelector('.hover-preview');
+            item.addEventListener('mouseenter', () => {
+                video.play();
+            });
+            item.addEventListener('mouseleave', () => {
+                video.pause();
+                video.currentTime = 0;
+            });
         });
     </script>
 </body>

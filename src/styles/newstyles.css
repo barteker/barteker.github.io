@@ -590,11 +590,32 @@ a.gallery-item {
     transform: scale(1.02);
 }
 
-.gallery-item img {
+.gallery-item img,
+.gallery-item video {
     width: 100%;
     height: auto;
     display: block;
     border-radius: 0px;
+}
+
+.video-preview-item {
+    position: relative;
+}
+
+.video-preview-item .hover-preview {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.video-preview-item:hover .hover-preview {
+    opacity: 1;
 }
 
 .project-info {
