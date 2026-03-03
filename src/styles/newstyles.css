@@ -317,7 +317,6 @@ footer {
   pointer-events: none;
 }
 
-/* Add styles for sub-pages */
 .page-title {
   font-size: clamp(2.5rem, 6vw, 4rem);
   margin-bottom: 2rem;
@@ -462,11 +461,11 @@ footer {
   }
 
   .font-credits {
-    position: fixed; /* Change from sticky to fixed */
+    position: fixed;
     top: 0;
     background: var(--bg-color);
     padding: 0.5rem 0.25rem;
-    margin-bottom: 0; /* Remove margin */
+    margin-bottom: 0;
     z-index: 2000; /* above side-nav */
     width: 100%;
     text-align: center;
@@ -575,7 +574,6 @@ footer {
     overflow: hidden;
     border-radius: 0px;
     transition: transform 0.3s ease;
-    /* Reliable taps on mobile and touch devices */
     touch-action: manipulation;
     -webkit-tap-highlight-color: transparent;
 }

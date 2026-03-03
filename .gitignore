@@ -8,3 +8,7 @@ coverage/
 
 # Large video source files (use compressed mp4 for repo; keep .mov local only)
 *.mov
+
+# Mavericks originals (WebP versions are in repo)
+src/assets/mavs/*.jpg
+src/assets/mavs/*.png
