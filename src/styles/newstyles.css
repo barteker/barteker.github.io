@@ -710,3 +710,121 @@ a.gallery-item {
     object-fit: cover;
     display: block;
   }
+
+/* Static gallery items (non-link) — disable the hover zoom so it doesn't
+   imply navigation that doesn't exist. Used on project detail pages. */
+.gallery-item--static {
+    cursor: default;
+}
+
+.gallery-item--static:hover {
+    transform: none;
+}
+
+/* Case Study Sections — used on project detail pages (e.g. wav.html) for
+   long-form narrative blocks: problem, product, role, process, etc. */
+.case-study-section {
+    width: 70.71%;
+    margin: 6rem auto 0;
+    font-family: "Clash Grotesk", sans-serif;
+    color: var(--text-color);
+}
+
+.section-eyebrow {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    opacity: 0.55;
+    margin-bottom: 0.75rem;
+}
+
+.section-title {
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.section-body {
+    max-width: 720px;
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+.section-body p + p {
+    margin-top: 1rem;
+}
+
+.section-body strong {
+    font-weight: 600;
+}
+
+.section-body ul {
+    margin-top: 1rem;
+    padding-left: 1.25rem;
+    line-height: 1.7;
+}
+
+.section-body li + li {
+    margin-top: 0.4rem;
+}
+
+.section-media {
+    margin-top: 2.5rem;
+}
+
+/* Dashed placeholder shown where a sketch / render / diagram should go,
+   so the page reads as intentional while the asset is still pending. */
+.media-placeholder {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    border: 1px dashed rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.45);
+    font-size: 0.95rem;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.case-study-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    padding: 1rem 1.75rem;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.case-study-cta:hover {
+    background-color: #ff6f00;
+    color: var(--bg-color);
+    transform: translateY(-2px);
+}
+
+.case-study-cta:visited {
+    color: var(--bg-color);
+}
+
+@media (max-width: 768px) {
+    .case-study-section {
+        width: 90%;
+        margin-top: 4rem;
+    }
+
+    .section-body {
+        font-size: 1rem;
+    }
+
+    .media-placeholder {
+        aspect-ratio: 4 / 3;
+    }
+}
