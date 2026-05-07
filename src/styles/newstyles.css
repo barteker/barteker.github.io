@@ -348,8 +348,14 @@ footer {
   text-align: center;
 }
 
-#resume-button {
-  display: inline-block;
+/* Primary button — shared by the "OBSERVED EXPERIENCE" resume link on the
+   about page and the "VISIT WAVMUSICPLAYER.COM" CTA on the W/AV case study.
+   Keep both selectors here so visual changes stay in one place. */
+#resume-button,
+.case-study-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   padding: 1rem 2rem;
   background-color: #e0e0e0;
   color: var(--text-color);
@@ -363,9 +369,15 @@ footer {
   -webkit-tap-highlight-color: transparent;
 }
 
-#resume-button:hover {
+#resume-button:hover,
+.case-study-cta:hover {
   background-color: #ff6f00;
   transform: translateY(-2px);
+}
+
+#resume-button:visited,
+.case-study-cta:visited {
+  color: var(--text-color);
 }
 
 @media (max-width: 768px) {
@@ -789,29 +801,10 @@ a.gallery-item {
     background-color: rgba(0, 0, 0, 0.02);
 }
 
+/* Spacing nudge above the CTA when it sits inside a section body —
+   visual styling itself is shared with #resume-button above. */
 .case-study-cta {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
     margin-top: 1.5rem;
-    padding: 1rem 1.75rem;
-    background-color: var(--text-color);
-    color: var(--bg-color);
-    text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    border-radius: 4px;
-}
-
-.case-study-cta:hover {
-    background-color: #ff6f00;
-    color: var(--bg-color);
-    transform: translateY(-2px);
-}
-
-.case-study-cta:visited {
-    color: var(--bg-color);
 }
 
 @media (max-width: 768px) {
