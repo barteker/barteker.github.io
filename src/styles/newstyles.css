@@ -733,6 +733,82 @@ a.gallery-item {
     transform: none;
 }
 
+/* W/AV Process / In Progress: two-column tile.
+   Left column stacks the user-test grid on top of the build timelapse;
+   right column holds the portrait prototype clip alongside them. */
+.gallery-row.gallery-row--process-media {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: center;
+    gap: 44px;
+    width: 100%;
+}
+
+.gallery-column.gallery-column--process-left {
+    flex: 1 1 auto;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+}
+
+.gallery-column.gallery-column--process-right {
+    flex: 0 0 auto;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-column.gallery-column--process-left .gallery-item--process-usertests img,
+.gallery-column.gallery-column--process-left .gallery-item--process-timelapse video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.gallery-column.gallery-column--process-left .gallery-item--process-timelapse video {
+    aspect-ratio: 608 / 540;
+}
+
+.gallery-column.gallery-column--process-right .gallery-item--process-prototype {
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-column.gallery-column--process-right .gallery-item--process-prototype video {
+    width: auto;
+    max-width: min(320px, 32vw);
+    height: auto;
+    display: block;
+    object-fit: contain;
+    aspect-ratio: 9 / 16;
+}
+
+@media (max-width: 768px) {
+    .gallery-row.gallery-row--process-media {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .gallery-column.gallery-column--process-left,
+    .gallery-column.gallery-column--process-right {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .gallery-column.gallery-column--process-right .gallery-item--process-prototype video {
+        max-width: 280px;
+    }
+}
+
 /* Case Study Sections — used on project detail pages (e.g. wav.html) for
    long-form narrative blocks: problem, product, role, process, etc. */
 .case-study-section {
