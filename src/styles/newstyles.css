@@ -512,17 +512,18 @@ footer {
     width: 70.71%;
     z-index: 1;
     pointer-events: none;
+    mix-blend-mode: difference;
   }
   
   .title-svg {
     width: 100%;
     position: absolute;
   }
-  
+
   .title-svg text {
+    fill: white;
     font-family: "Clash Grotesk", sans-serif;
     font-size: 4rem;
-    fill: var(--text-color);
 }
 
 .title-svg path {

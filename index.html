@@ -35,7 +35,9 @@
 
                 <!-- thisisdrugs. BRANDING -->
                 <div class="gallery-row full-width">
-                    <a href="visual/this-is-drugs.html" class="gallery-item">
+                    <a href="visual/this-is-drugs.html"
+                       class="gallery-item thisisdrugs-variant-preview"
+                       data-variant-srcs="src/assets/thisisdrugs/general.webp,src/assets/thisisdrugs/guatemala.webp,src/assets/thisisdrugs/ethiopia.webp">
                         <img src="src/assets/thisisdrugs/general.webp" alt="this is drugs. coffee packaging system">
                     </a>
                 </div>
@@ -115,6 +117,35 @@
             item.addEventListener('mouseleave', () => {
                 video.pause();
                 video.currentTime = 0;
+            });
+        });
+
+        document.querySelectorAll('.thisisdrugs-variant-preview').forEach(item => {
+            const image = item.querySelector('img');
+            const variants = item.dataset.variantSrcs.split(',').map(src => src.trim());
+            let variantIndex = 0;
+            let cycleId;
+
+            variants.forEach(src => {
+                const preload = new Image();
+                preload.src = src;
+            });
+
+            const showNextVariant = () => {
+                variantIndex = (variantIndex + 1) % variants.length;
+                image.src = variants[variantIndex];
+            };
+
+            item.addEventListener('mouseenter', () => {
+                if (variants.length < 2) return;
+                showNextVariant();
+                cycleId = window.setInterval(showNextVariant, 700);
+            });
+
+            item.addEventListener('mouseleave', () => {
+                window.clearInterval(cycleId);
+                variantIndex = 0;
+                image.src = variants[variantIndex];
             });
         });
     </script>
