@@ -43,7 +43,10 @@
 
                 <!-- thisisdrugs. BRANDING -->
                 <div class="gallery-row full-width">
-                    <div class="gallery-item" onclick="window.location.href='../visual/this-is-drugs.html'">
+                    <div class="gallery-item multi-image-variant-preview"
+                         onclick="window.location.href='../visual/this-is-drugs.html'"
+                         data-default-src="../src/assets/thisisdrugs/general.webp"
+                         data-variant-srcs="../src/assets/thisisdrugs/general.webp,../src/assets/thisisdrugs/guatemala.webp,../src/assets/thisisdrugs/ethiopia.webp">
                         <img src="../src/assets/thisisdrugs/general.webp" alt="this is drugs. coffee packaging system">
                         <div class="project-info">
                             <h3 class="project-title">this is drugs.</h3>
@@ -69,11 +72,12 @@
                     
                 </div> -->
                 <!-- ROCKY MOUNTAIN MAVERICKS HERO IMAGE -->
-                <div class="gallery-row multi-image">
-                    
-                    <div class="gallery-item" >
-                    <!-- <div class="gallery-item" onclick="window.location.href='../visual/rocky-mountain-mavericks.html'"> -->
-                        <img src="../src/assets/img/MeetWeekPostState.webp" alt="Meet Week States Post" loading="lazy">
+                <div class="gallery-row full-width">
+                    <div class="gallery-item multi-image-variant-preview"
+                         onclick="window.location.href='../visual/rocky-mountain-mavericks.html'"
+                         data-default-src="../src/assets/mavs/MavsTitleImage.webp"
+                         data-variant-srcs="../src/assets/mavs/TitleSlide1.webp,../src/assets/mavs/TitleSlide2.webp,../src/assets/mavs/TitleSlide3.webp,../src/assets/mavs/TitleSlide4.webp">
+                        <img src="../src/assets/mavs/MavsTitleImage.webp" alt="Rocky Mountain Mavericks brand title treatment" loading="lazy">
                         <div class="project-info">
                             <h3 class="project-title">Rocky Mountain Mavericks</h3>
                             <p class="project-description">Updated the Rocky Mountain Mavericks Men's Gymnastics team's existing branding providing more logo options, refined color palette, and font choices. Designed merch items and social media posts, and coordinated to update existing website.</p>
@@ -187,21 +191,11 @@
     <script src="../src/scripts/gsap.min.js"></script>
     <script src="../src/scripts/ScrambleTextPlugin.min.js"></script>
     <script src="../src/scripts/animations.js"></script>
+    <script src="../src/scripts/gallery-previews.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lenis@1.2.3/dist/lenis.min.js"></script>
     <script>
         const lenis = new Lenis({
             autoRaf: true,
-        });
-
-        document.querySelectorAll('.video-preview-item').forEach(item => {
-            const video = item.querySelector('.hover-preview');
-            item.addEventListener('mouseenter', () => {
-                video.play();
-            });
-            item.addEventListener('mouseleave', () => {
-                video.pause();
-                video.currentTime = 0;
-            });
         });
     </script>
 </body>

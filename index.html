@@ -36,7 +36,8 @@
                 <!-- thisisdrugs. BRANDING -->
                 <div class="gallery-row full-width">
                     <a href="visual/this-is-drugs.html"
-                       class="gallery-item thisisdrugs-variant-preview"
+                       class="gallery-item multi-image-variant-preview"
+                       data-default-src="src/assets/thisisdrugs/general.webp"
                        data-variant-srcs="src/assets/thisisdrugs/general.webp,src/assets/thisisdrugs/guatemala.webp,src/assets/thisisdrugs/ethiopia.webp">
                         <img src="src/assets/thisisdrugs/general.webp" alt="this is drugs. coffee packaging system">
                     </a>
@@ -44,18 +45,11 @@
 
                 <!-- ROCKY MOUNTAIN MAVERICKS -->
                 <div class="gallery-row multi-image">
-                    <a href="visual/rocky-mountain-mavericks.html" class="gallery-item">
-                        <img src="src/assets/img/MeetWeekPostState.webp" alt="Meet Week States Post" loading="lazy">
-                    </a>
-                </div>
-
-                <!-- Additional RMM assets -->
-                <div class="gallery-row multi-image">
-                    <a href="visual/rocky-mountain-mavericks.html" class="gallery-item">
-                        <img src="src/assets/img/WINvsNYA.webp" alt="Win vs NYA Post" loading="lazy">
-                    </a>
-                    <a href="visual/rocky-mountain-mavericks.html" class="gallery-item">
-                        <img src="src/assets/img/WesternsPost.webp" alt="Westerns Post" loading="lazy">
+                    <a href="visual/rocky-mountain-mavericks.html"
+                       class="gallery-item multi-image-variant-preview"
+                       data-default-src="src/assets/mavs/MavsTitleImage.webp"
+                       data-variant-srcs="src/assets/mavs/TitleSlide1.webp,src/assets/mavs/TitleSlide2.webp,src/assets/mavs/TitleSlide3.webp,src/assets/mavs/TitleSlide4.webp">
+                        <img src="src/assets/mavs/MavsTitleImage.webp" alt="Rocky Mountain Mavericks Brand Title Slide" width="1920" height="1080">
                     </a>
                 </div>
 
@@ -103,50 +97,11 @@
     <script src="src/scripts/gsap.min.js"></script>
     <script src="src/scripts/ScrambleTextPlugin.min.js"></script>
     <script src="src/scripts/animations.js"></script>
+    <script src="src/scripts/gallery-previews.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lenis@1.2.3/dist/lenis.min.js"></script>
     <script>
         const lenis = new Lenis({
             autoRaf: true,
-        });
-
-        document.querySelectorAll('.video-preview-item').forEach(item => {
-            const video = item.querySelector('.hover-preview');
-            item.addEventListener('mouseenter', () => {
-                video.play();
-            });
-            item.addEventListener('mouseleave', () => {
-                video.pause();
-                video.currentTime = 0;
-            });
-        });
-
-        document.querySelectorAll('.thisisdrugs-variant-preview').forEach(item => {
-            const image = item.querySelector('img');
-            const variants = item.dataset.variantSrcs.split(',').map(src => src.trim());
-            let variantIndex = 0;
-            let cycleId;
-
-            variants.forEach(src => {
-                const preload = new Image();
-                preload.src = src;
-            });
-
-            const showNextVariant = () => {
-                variantIndex = (variantIndex + 1) % variants.length;
-                image.src = variants[variantIndex];
-            };
-
-            item.addEventListener('mouseenter', () => {
-                if (variants.length < 2) return;
-                showNextVariant();
-                cycleId = window.setInterval(showNextVariant, 700);
-            });
-
-            item.addEventListener('mouseleave', () => {
-                window.clearInterval(cycleId);
-                variantIndex = 0;
-                image.src = variants[variantIndex];
-            });
         });
     </script>
 </body>
