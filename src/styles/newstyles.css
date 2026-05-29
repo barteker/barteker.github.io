@@ -387,7 +387,8 @@ footer {
 
   main {
     position: relative;
-    z-index: 1;
+    /* Avoid z-index here: it creates a stacking context on this flex item and
+       traps .title-container's mix-blend-mode inside main (broken on mobile Firefox). */
     width: 100%;
     padding: 0 1rem;
     margin-top: 36px; /* Space for nav + font credits */
@@ -510,7 +511,7 @@ footer {
     right: 0;
     top: 0;
     width: 70.71%;
-    z-index: 1;
+    z-index: 5;
     pointer-events: none;
     mix-blend-mode: difference;
   }
