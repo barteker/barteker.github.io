@@ -818,6 +818,8 @@ a.gallery-item {
     margin: 6rem auto 0;
     font-family: "Clash Grotesk", sans-serif;
     color: var(--text-color);
+    position: relative;
+    isolation: isolate;
 }
 
 .section-eyebrow {
@@ -861,12 +863,23 @@ a.gallery-item {
 
 .spotify-embed {
     margin-top: 1.5rem;
-    max-width: 100%;
+    width: 100%;
+    height: 152px;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    z-index: 6;
+    isolation: isolate;
+    transform: translateZ(0);
+    background-color: #121212;
 }
 
 .spotify-embed iframe {
     display: block;
+    width: 100%;
+    height: 152px;
     border: 0;
+    clip-path: inset(0 round 12px);
 }
 
 .section-media {
