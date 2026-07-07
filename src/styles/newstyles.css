@@ -859,6 +859,16 @@ a.gallery-item {
     margin-top: 0.4rem;
 }
 
+.spotify-embed {
+    margin-top: 1.5rem;
+    max-width: 100%;
+}
+
+.spotify-embed iframe {
+    display: block;
+    border: 0;
+}
+
 .section-media {
     margin-top: 2.5rem;
 }
