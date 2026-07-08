@@ -576,6 +576,28 @@ footer {
     flex: 1;
 }
 
+.gallery-row.multi-image.gallery-row--equal-height {
+    justify-content: center;
+    align-items: stretch;
+}
+
+.gallery-row.multi-image.gallery-row--equal-height .gallery-item {
+    flex: 0 1 auto;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    min-width: 0;
+}
+
+.gallery-row.multi-image.gallery-row--equal-height .gallery-item img {
+    width: auto;
+    max-width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
 .gallery-column {
     flex: 1;
     display: flex;
@@ -590,6 +612,14 @@ footer {
     transition: transform 0.3s ease;
     touch-action: manipulation;
     -webkit-tap-highlight-color: transparent;
+}
+
+.gallery-item.full-height {
+  width: auto !important;
+  height: 100% !important;
+  align-items: stretch;
+  object-fit: cover;
+  display: flex !important;
 }
 
 /* When gallery-item is a link (index.html) */
